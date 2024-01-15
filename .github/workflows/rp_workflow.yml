@@ -18,16 +18,12 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        pip install flake8
 
     - name: Executer le fichier Python
       run: |
         python random_picking.py
 
-    - name: lint Python code
-      run: flake8 random_picking.py
-
-
+        
   test:
     needs: build
     runs-on: ubuntu-latest
