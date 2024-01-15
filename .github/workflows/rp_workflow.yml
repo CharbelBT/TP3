@@ -23,6 +23,9 @@ jobs:
       run: |
         python random_picking.py
 
+    - name: lint Python code
+      run: flake8 random_picking.py
+
 
   test:
     needs: build
